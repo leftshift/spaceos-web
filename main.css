@@ -1,0 +1,61 @@
+html {
+	background-image: url("galaxy.jpg");
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	background-color: #0f0f0e;
+}
+
+
+body {
+	max-width: 50em;
+	margin: 1em auto;
+	padding: 0.2em 1em;
+	font-family: sans;
+	font-size: 1em;
+	color: #ffffff;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 1em;
+}
+
+#screen {
+	font-family: monospace;
+	font-size: 1.3em;
+	background-color: #0e2410;
+	color: #00c800;
+	padding: 0.5em;
+	border: 1.5em #8a8678 solid;
+	width: 32ch;
+	height: 20lh;
+	margin: 1em auto;
+	border-radius: 0.5em;
+}
+
+@media (max-width:400px) {
+	#screen {
+		border: 0.5em #b0a581 solid;
+	}
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+}
+
+#command {
+	width: 32ch;
+	font-family: monospace;
+}
+
+.footer {
+	margin-top: 2em;
+	border-top: 0.1em #ffffff solid;
+}
+
+a {
+	color: #6190ff;
+}
+
+a:visited {
+	color: #c661ff;
+}
