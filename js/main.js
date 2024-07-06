@@ -1,8 +1,9 @@
+const screen = document.getElementById('screen');
+const input = document.getElementById('command');
+const sendButton = document.getElementById('send-button');
+
 Module.onRuntimeInitialized = () => {
 	const handle_input = Module.cwrap('handle_input', 'string', ['string']);
-	const screen = document.getElementById('screen');
-	const input = document.getElementById('command');
-	const sendButton = document.getElementById('send-button');
 
 	let prevInput = "";
 
@@ -36,3 +37,9 @@ Module.onRuntimeInitialized = () => {
 	handleCommand("prompt");
 };
 
+Module.onAbort = () => {
+  screen.textContent = "WebAssembly aborted or \n"
+  + "failed to initialize.\n\n"
+  + "Try enabling JavaScript JIT"
+  + "or use a different browser.";
+}
